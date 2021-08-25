@@ -31,13 +31,13 @@ const Clock = () => {
 
   return (
     <div className='clock'>
-      <DigitSelector digit={digits[0]} />
+      <DigitSelector digit={digits[0]} maxDigit={1} />
       <DigitSelector digit={digits[1]} />
       :
-      <DigitSelector digit={digits[2]} />
+      <DigitSelector digit={digits[2]} maxDigit={5} />
       <DigitSelector digit={digits[3]} />
       :
-      <DigitSelector digit={digits[4]} />
+      <DigitSelector digit={digits[4]} maxDigit={5} />
       <DigitSelector digit={digits[5]} />
     </div>
   )
