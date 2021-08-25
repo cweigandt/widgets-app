@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   position: relative;
+  max-width: 15%;
   width: 100px;
 
-  margin: 10px;
+  margin: 4px;
 `
 
 const Selector = styled.div`

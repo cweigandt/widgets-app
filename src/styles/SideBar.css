@@ -144,7 +144,16 @@
   fill: black;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
+  .sidebar:not(.open) {
+    height: 78px;
+    border-radius: 0 0 10px 0;
+  }
+
+  .sidebar:not(.open) li {
+    display: none;
+  }
+
   .sidebar li .tooltip {
     display: none;
   }
