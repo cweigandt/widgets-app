@@ -1,7 +1,7 @@
 import '../../styles/SideBar.css'
 
 import { useCallback, useRef } from 'react'
-import { BiMenu, BiTimeFive } from 'react-icons/bi'
+import { BiHome, BiMenu, BiTimeFive } from 'react-icons/bi'
 
 const SideBar = () => {
   const sideBarRef = useRef(null)
@@ -29,6 +29,7 @@ const SideBar = () => {
         <div className='logo_name'>Christian</div>
       </div>
       <ul className='nav-list'>
+        <LinkItem href='/' iconComponent={<BiHome />} text='Home' />
         <LinkItem href='clock' iconComponent={<BiTimeFive />} text='Clock' />
       </ul>
     </div>
