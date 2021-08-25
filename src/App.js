@@ -3,7 +3,7 @@ import './App.css'
 import { Route, Switch } from 'react-router-dom'
 
 import SideBar from './components/sidebar/SideBar'
-import Clock from './components/widgets/Clock'
+import Clock from './components/widgets/clock/Clock'
 
 const Home = () => null
 

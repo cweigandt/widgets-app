@@ -4,12 +4,8 @@ body {
   height: 100vh;
   margin: 0;
 }
-
-/* Google Font Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&amp;display=swap');
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 .App {
@@ -20,8 +16,22 @@ body {
 
 .App .page {
   position: relative;
-  width: 100%;
+  width: calc(100% - 78px);
   height: 100%;
 
-  background-color: #bccdde;
+  left: 78px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: darkgray;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
