@@ -26,7 +26,7 @@ const SideBar = () => {
     <div className='sidebar' ref={sideBarRef}>
       <div className='logo-details'>
         <BsList onClick={handleMenuClick} />
-        <div className='logo_name'>Christian</div>
+        <div className='logo_name'>SHOWCASE</div>
       </div>
       <ul className='nav-list'>
         <LinkItem href='/' iconComponent={<BsHouseFill />} text='Home' />
