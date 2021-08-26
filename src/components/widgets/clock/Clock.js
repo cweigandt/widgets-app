@@ -1,7 +1,21 @@
-import '../../../styles/widgets/clock/Clock.css'
-
 import { useEffect, useState } from 'react'
 import DigitSelector from './DigitSelector'
+
+import styled from 'styled-components'
+
+const ClockDiv = styled.div`
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  font-family: 'Roboto Mono', monospace;
+  font-size: 40px;
+  color: rgb(38, 27, 70);
+`
 
 const getTimeAsDigits = (date) => {
   const ampmHour = date.getHours() % 12 || 12
@@ -30,7 +44,7 @@ const Clock = () => {
   }, [])
 
   return (
-    <div className='clock'>
+    <ClockDiv>
       <DigitSelector digit={digits[0]} maxDigit={1} />
       <DigitSelector digit={digits[1]} />
       :
@@ -39,7 +53,7 @@ const Clock = () => {
       :
       <DigitSelector digit={digits[4]} maxDigit={5} />
       <DigitSelector digit={digits[5]} />
-    </div>
+    </ClockDiv>
   )
 }
 
