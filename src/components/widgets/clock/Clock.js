@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import DigitSelector from './DigitSelector'
 
 import styled from 'styled-components'
+import withLoadingOpacity from '../../../hoc/withLoadingOpacity'
 
 const ClockDiv = styled.div`
   position: relative;
@@ -57,4 +58,4 @@ const Clock = () => {
   )
 }
 
-export default Clock
+export default withLoadingOpacity(Clock)
