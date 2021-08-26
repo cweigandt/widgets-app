@@ -8,7 +8,15 @@ const Wrapper = styled.div`
   margin: 4px;
 `
 
-const Selector = styled.div`
+const GlassMorphism = styled.div`
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 1);
+`
+
+const Selector = styled(GlassMorphism)`
   position: absolute;
   display: flex;
   justify-content: center;
@@ -27,7 +35,7 @@ const Digit = styled.div`
   transition: opacity 0.5s ease;
 `
 
-const GlassDisplay = styled.div`
+const GlassDisplay = styled(GlassMorphism)`
   position: absolute;
   display: flex;
   justify-content: center;
@@ -50,10 +58,7 @@ const GlassDisplay = styled.div`
 
 const DigitSelector = ({ digit, maxDigit = 9 }) => {
   const generateFull = () => (
-    <Selector
-      className='glassmorphism'
-      style={{ top: -50 - 73 * digit + 'px' }}
-    >
+    <Selector style={{ top: -50 - 73 * digit + 'px' }}>
       {Array.from(Array(maxDigit + 1).keys()).map((num) => {
         return (
           <Digit
@@ -72,7 +77,7 @@ const DigitSelector = ({ digit, maxDigit = 9 }) => {
   return (
     <Wrapper>
       {generateFull()}
-      <GlassDisplay className='glassmorphism' />
+      <GlassDisplay />
     </Wrapper>
   )
 }

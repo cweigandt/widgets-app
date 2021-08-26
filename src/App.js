@@ -2,10 +2,9 @@ import './App.css'
 
 import { Route, Switch } from 'react-router-dom'
 
+import Home from './components/home/Home'
 import SideBar from './components/sidebar/SideBar'
 import Clock from './components/widgets/clock/Clock'
-
-const Home = () => null
 
 const App = () => {
   const renderRoutes = () => (
