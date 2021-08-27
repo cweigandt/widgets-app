@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  width: 78px;
+  width: 50px;
   background: #030f12;
   padding: 6px 14px;
   z-index: 99;
@@ -47,7 +47,7 @@
 .sidebar svg {
   color: #fff;
   height: 60px;
-  min-width: 50px;
+  min-width: 25px;
   font-size: 28px;
   text-align: center;
   line-height: 60px;
@@ -63,7 +63,7 @@
 
 .sidebar li {
   position: relative;
-  margin: 25px 0;
+  margin: 10px 0;
   list-style: none;
 }
 
@@ -107,10 +107,6 @@
   background: #11101d;
 }
 
-.sidebar li a:hover {
-  background: #fff;
-}
-
 .sidebar li a .links_name {
   color: #fff;
   padding-left: 10px;
@@ -130,18 +126,18 @@
 .sidebar li a:hover .links_name,
 .sidebar li a:hover i {
   transition: all 0.5s ease;
-  color: #11101d;
+  color: lightblue;
 }
 
 .sidebar li svg {
-  height: 50px;
-  line-height: 50px;
+  height: 22px;
+  line-height: 22px;
   font-size: 18px;
   border-radius: 12px;
 }
 
 .sidebar li:hover svg {
-  fill: black;
+  fill: lightblue;
 }
 
 @media (max-width: 600px) {

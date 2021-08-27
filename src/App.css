@@ -16,10 +16,10 @@ body {
 
 .App .page {
   position: relative;
-  width: calc(100% - 78px);
+  width: calc(100% - 50px);
   height: 100%;
 
-  left: 78px;
+  left: 50px;
   padding: 20px;
 
   display: flex;

@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 const StyledWaves = styled(Waves)`
   position: absolute;
-  width: calc(100% + 60px);
+  width: calc(100% + 120px);
 
-  left: -30px;
+  left: -60px;
   bottom: 0;
 `
 

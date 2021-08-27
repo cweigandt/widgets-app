@@ -1,4 +1,13 @@
 import { useEffect, useState } from 'react'
+import styled from 'styled-components'
+
+const OpacityDiv = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: ${(props) => (props.loaded ? 1 : 0)};
+  transition: opacity 0.5s ease;
+`
 
 const withLoadingOpacity = (WrappedComponent) => {
   return ({ loadTimeout, ...rest }) => {
@@ -7,13 +16,13 @@ const withLoadingOpacity = (WrappedComponent) => {
     useEffect(() => {
       setTimeout(() => {
         setLoaded(true)
-      }, 500 || loadTimeout)
+      }, loadTimeout || 600)
     }, [loadTimeout])
 
     return (
-      <div style={{ opacity: loaded ? 1 : 0, transition: 'opacity 0.5s ease' }}>
+      <OpacityDiv loaded={loaded}>
         <WrappedComponent {...rest} />
-      </div>
+      </OpacityDiv>
     )
   }
 }
