@@ -1,7 +1,7 @@
 import '../../styles/SideBar.css'
 
 import { useCallback, useRef } from 'react'
-import { BsHouseFill, BsList, BsFillClockFill } from 'react-icons/bs'
+import { BsHouseFill, BsList, BsFillClockFill, BsSun } from 'react-icons/bs'
 
 const SideBar = () => {
   const sideBarRef = useRef(null)
@@ -35,6 +35,7 @@ const SideBar = () => {
           iconComponent={<BsFillClockFill />}
           text='Clock'
         />
+        <LinkItem href='weather' iconComponent={<BsSun />} text='Weather' />
       </ul>
     </div>
   )

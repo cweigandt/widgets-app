@@ -31,7 +31,7 @@ const getTimeAsDigits = (date) => {
   ]
 }
 
-const Clock = () => {
+const Widget = () => {
   const [digits, setDigits] = useState(getTimeAsDigits(new Date()))
 
   useEffect(() => {
@@ -58,4 +58,4 @@ const Clock = () => {
   )
 }
 
-export default withLoadingOpacity(Clock)
+export default withLoadingOpacity(Widget)
